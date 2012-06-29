@@ -1,6 +1,6 @@
 require 'formula'
 
-class Httpd < Formula
+class Httpd24 < Formula
 	homepage 'http://httpd.apache.org'
 	url 'http://www.apache.org/dist/httpd/httpd-2.4.2.tar.bz2'
 	sha1 '8d391db515edfb6623c0c7c6ce5c1b2e1f7c64c2'
