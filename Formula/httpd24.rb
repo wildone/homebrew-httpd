@@ -45,26 +45,27 @@ class Httpd24 < Formula
 		system "make"
 		system "make install"
 
-		(prefix+'com.apache.httpd.plist').write startup_plist
-		(prefix+'com.apache.httpd.plist').chmod 0644
+		plist_path.write startup_plist
+		plist_path.chmod 0644
 	end
 
-	def startup_plist; <<-EOPLIST.undent
-		<?xml version="1.0" encoding="UTF-8"?>
-	    <!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-	    <plist version="1.0">
-	    <dict>
-	      <key>Label</key>
-	      <string>com.apache.httpd</string>
-	      <key>ProgramArguments</key>
-	      <array>
-	        <string>#{sbin}/apachectl</string>
-	        <string>start</string>
-	      </array>
-	      <key>RunAtLoad</key>
-	      <true/>
-	    </dict>
-	    </plist>
-    	EOPLIST
+	def startup_plist
+		return <<-EOS
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.apache.httpd</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>#{sbin}/apachectl</string>
+    <string>start</string>
+  </array>
+  <key>RunAtLoad</key>
+  <true/>
+</dict>
+</plist>
+EOS
     end
 end
