@@ -12,9 +12,7 @@ class Httpd24 < Formula
 
 	def options
 	 [
-	 	['--with-ssl', 'Include SSL support'],
-	 	['--with-lua', 'Include Lua support'],
-	 	['--with-ldap', 'Include LDAP support']
+	 	['--with-lua', 'Include Lua support']
 	 ]
 	end
 
@@ -28,17 +26,8 @@ class Httpd24 < Formula
 			"--with-mpm=prefork"
 		]
 
-		if ARGV.include? '--with-ssl'
-			args << "--enable-ssl"
-			args << "--with-ssl=/usr"
-		end
-
 		if ARGV.include? '--with-lua'
 			args << "--with-lua"
-		end
-
-		if ARGV.include? '--with-ldap'
-			args << "--with-ldap"
 		end
 
 		system "./configure", *args
