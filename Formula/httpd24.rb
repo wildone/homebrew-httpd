@@ -26,6 +26,7 @@ class Httpd < Formula
 			"--mandir=#{man}",
 			"--enable-layout=GNU",
 			"--with-mpm=prefork"
+		]
 
 		if ARGV.include? '--with-ssl'
 			args << "--enable-ssl"
