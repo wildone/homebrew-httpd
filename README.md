@@ -8,9 +8,13 @@ I wanted to upgrade Lion's version of Apache to 2.4 to check out some of the new
 
 ##Installation
 Run the following in your commandline:
+
 	brew tap jabberwik/homebrew-httpd
+	
 Then install Apache HTTP Server 2.4:
+
 	brew install httpd24
+	
 That's it!
 
 This is my first formula contribution to the world, so let me know if I did something completely backwards. Contributions are welcomed!
