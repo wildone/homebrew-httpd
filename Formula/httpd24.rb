@@ -30,7 +30,7 @@ class Httpd24 < Formula
 			args << "--with-lua"
 		end
 
-		system "./configure", *args
+		system "./configure", "LTFLAGS=--tag=cc", *args
 		system "make"
 		system "make install"
 
