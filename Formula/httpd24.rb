@@ -8,7 +8,8 @@ class Httpd24 < Formula
 
 	skip_clean ['bin', 'sbin']
 
-	depends_on 'pcre'
+    depends_on 'pcre'
+    depends_on 'libtool'
 
 	def options
 	 [
