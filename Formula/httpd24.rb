@@ -2,7 +2,7 @@ require 'formula'
 
 class Httpd24 < Formula
 	homepage 'http://httpd.apache.org'
-    url 'http://www.apache.org/dist/httpd/httpd-2.4.3.tar.bz2'
+    url 'http://www.apache.org/dist/httpd/httpd-2.4.6.tar.bz2'
     sha1 '0ef1281bb758add937efe61c345287be2f27f662'
     version '2.4.3'
 
