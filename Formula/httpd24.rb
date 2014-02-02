@@ -2,9 +2,9 @@ require 'formula'
 
 class Httpd24 < Formula
 	homepage 'http://httpd.apache.org'
-    url 'http://www.apache.org/dist/httpd/httpd-2.4.6.tar.bz2'
-    sha1 '0ef1281bb758add937efe61c345287be2f27f662'
-    version '2.4.3'
+    url 'http://www.apache.org/dist/httpd/httpd-2.4.7.tar.bz2'
+    sha1 '19ed9ee56462e44d61a093ea57e964cf0af05c0e'
+    version '2.4.7'
 
 	skip_clean ['bin', 'sbin']
 
